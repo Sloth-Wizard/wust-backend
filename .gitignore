@@ -1,0 +1,16 @@
+# dot files
+.env*
+
+# files
+Cargo.lock
+README.priv.md
+**/*.pem
+
+# folders
+target
+**/node_modules
+
+# docker generated data
+docker/dev/mariadb-data
+docker/dev/mariadb-share
+docker/dev/dump.zip

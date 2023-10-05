@@ -1,0 +1,25 @@
+version: '1'
+services:
+  wust-api:
+    container_name: wust-api
+    env_file:
+      - ../../.env.dev
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on: 
+      - mariadb
+    links:
+      - mariadb
+  mariadb:
+    container_name: wust-db
+    image: mariadb:10.3.30
+    volumes:
+      - "./mariadb-data:/var/lib/mysql"
+      - "./mariadb-share:/tmp/data"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=wust

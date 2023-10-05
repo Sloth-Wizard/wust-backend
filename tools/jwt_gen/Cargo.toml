@@ -1,0 +1,11 @@
+[package]
+name = "wust-jwt"
+version = "0.1.0"
+authors = ["Sloth-Wizard <alexis.abeloos@gmail.com>"]
+edition = "2021"
+default-run = "wust-jwt"
+
+[dependencies]
+serde = "1.0.136"
+serde_json = "1.0.79"
+jsonwebtoken = {version = "8.1.0", default-features = true }

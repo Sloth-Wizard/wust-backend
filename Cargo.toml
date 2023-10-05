@@ -1,0 +1,25 @@
+[package]
+name = "wust"
+version = "0.1.0"
+authors = ["Sloth-Wizard <alexis.abeloos@gmail.com>"]
+edition = "2021"
+default-run = "wust"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15.0"
+hyper = { version = "0.14.18", features = ["full"] }
+hyper-tls = "0.5.0"
+tokio = { version = "1.17.0", features = ["full"] }
+futures = "0.3.21"
+sea-orm = { version = "0.7.1", features = ["sqlx-mysql", "runtime-tokio-native-tls", "macros"], default-features = false }
+serde = "1.0.136"
+serde_json = "1.0.79"
+chrono = "0.4.19"
+jsonwebtoken = {version = "8.1.0", default-features = true }
+pretty_env_logger = "0.4.0"
+
+[dependencies.sqlx]
+version = "0.5.11"
+default-features = false
