@@ -1,12 +1,12 @@
-# WUST-API
+# WUST-BACKEND
 
-Rewrite of the WebtoonFactory application backend    
+📟 Comics reader backend 
 
 ## Setup
 
 Clone 
 ```
-git clone git@github.com:AlexisADupuis/wust-api.git
+git clone git@github.com:Sloth-Wizard/wust-backend.git
 ```
 
 Move into clone folder
@@ -30,3 +30,9 @@ This will run the server on the ```127.0.0.1:3000``` by default, you can change 
 ## Database
 
 Be sure to have a clone of the ```dev``` or ```prod``` database up and running locally
+
+## OpenSSL
+
+To generate our needed keys, head to the `tools/jwt_gen` folder and run the `jwtgen.sh` script
+
+Then you can copy and paste the public key inside `src/oauth/pem` folder
